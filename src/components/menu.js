@@ -1,15 +1,37 @@
 import React from "react"
 import MenuItem from "./menu-item"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Menu = props => {
-  const menuItems = [
-    { name: "About", link: "/" },
-    { name: "Skills", link: "/skills" },
-    { name: "Education", link: "/education" },
-    { name: "Experience", link: "/experience" },
-    { name: "Interests", link: "/interests" },
-  ].map((item, index) => (
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          githubSiteName
+        }
+      }
+    }
+  `);
+  let menuList = [];
+  if(process.env.ENV === 'dev'){
+    menuList = [
+      { name: "About", link: "/" },
+      { name: "Skills", link: "/skills" },
+      { name: "Education", link: "/education" },
+      { name: "Experience", link: "/experience" },
+      { name: "Interests", link: "/interests" },
+    ];
+  }else{
+    menuList = [
+      { name: "About", link: `/${data.site.siteMetadata.githubSiteName}` },
+      { name: "Skills", link: `/${data.site.siteMetadata.githubSiteName}/skills` },
+      { name: "Education", link: `/${data.site.siteMetadata.githubSiteName}/education` },
+      { name: "Experience", link: `/${data.site.siteMetadata.githubSiteName}/experience` },
+      { name: "Interests", link: `/${data.site.siteMetadata.githubSiteName}/interests` },
+    ];
+  }
+  
+  const menuItems = menuList.map((item, index) => (
     <MenuItem
       to={item.link}
       name={item.name}
@@ -20,7 +42,7 @@ const Menu = props => {
           : ""
       }
     />
-  ))
+  ));
 
   return (
     <header className="site-header">

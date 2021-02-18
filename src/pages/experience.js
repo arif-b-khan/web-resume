@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import Item from "../components/item"
+import CompanyItem from "../components/companyItem";
 import { useStaticQuery, graphql } from "gatsby"
 
 export default props => {
@@ -13,17 +13,21 @@ export default props => {
             when
             company
             where
+            logo
             moreInfo
           }
         }
       }
     }
-  `)
+  `);
+
+
   const experience = data.site.siteMetadata.experience.map((item, index) => (
-    <Item
+    <CompanyItem
       key={index}
       name={item.role}
       when={item.when}
+      logo={item.logo}
       where={item.where}
       org={item.company}
       moreInfo={item.moreInfo}

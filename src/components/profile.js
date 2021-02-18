@@ -1,7 +1,8 @@
 import React from "react"
-import profile_photo from "../../static/profile.png"
+import profile_photo from "../../static/profile1.png"
 import { SocialIcon } from "react-social-icons"
 import { useStaticQuery, graphql } from "gatsby"
+import {rewriteUrl} from "../utils/common";
 
 const Profile = props => {
   const data = useStaticQuery(graphql`
@@ -32,7 +33,7 @@ const Profile = props => {
   ))
   return (
     <>
-      <img src={profile_photo} alt={props.name} id="profile-img" />
+      <img src={rewriteUrl(profile_photo)} alt={props.name} id="profile-img" />
       <div id="profile-info-wrapper">
         <h4 id="profile-name">{props.name}</h4>
         <h6 id="profile-role">{props.role}</h6>

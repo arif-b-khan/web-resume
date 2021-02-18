@@ -1,136 +1,203 @@
+const activeEnv =
+process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+console.log(`Using environment config: '${activeEnv}'`);
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+});
+console.log(process.env);
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    siteUrl: `https://gatsby-starter-clean-resume.netlify.com/`,
-    name: `Luke Skywalker`,
+    siteUrl: `https://arif-b-khan.github.io/resume`,
+    githubSiteName: `resume`,
+    name: `Arif Khan`,
     role: `Software Developer`,
-    email: `luke@thelightside.com`,
+    email: `arif.bannehasan@gmail.com`,
     socialMedia: [
       {
         name: "github",
-        link: "https://github.com/masoudkarimif/gatsby-starter-clean-resume",
+        link: "https://github.com/arif-b-khan",
       },
-      { name: "linkedin", link: "https://linkedin.com" },
-      { name: "facebook", link: "https://facebook.com" },
-      { name: "twitter", link: "https://twitter.com" },
-      { name: "instagram", link: "https://instagram.com" },
+      { name: "linkedin", link: "https://www.linkedin.com/in/arif-khan-01a5671b" },
+      { name: "twitter", link: "https://twitter.com/Arif77591270" },
+      { name: "instagram", link: "https://www.instagram.com/arif_b_khan" },
     ],
     about: `
-      <p>The son of Jedi Knight Anakin Skywalker and Senator Padmé Amidala,
-      Luke Skywalker was born along with his twin sister Leia in 19 BBY.
-      As a result of Amidala's death and Anakin's fall to the dark side of the Force,
-      the Skywalker children were separated and sent into hiding,
-      with Leia adopted by the royal family of Alderaan while Luke was raised by his relatives on Tatooine.
-      Longing for a life of adventure and purpose,
-      Skywalker joined the Rebellion and began learning the ways of the Force under the guidance of Jedi Master Obi-Wan Kenobi,
-      whose first apprentice was Luke's own father.
-      During the Battle of Yavin in 0 BBY, Skywalker saved the Alliance from annihilation by destroying the Empire's planet-killing superweapon,
-      the Death Star. He continued his training in the years that followed,
-      determined to become a Jedi Knight like his father before him,
-      and found a new mentor in Grand Master Yoda. After his master's death,
-      Skywalker participated in the Battle of Endor in 4 ABY,
-      during which he confronted the Sith Lord Darth Vader,
-      whom he learned was in fact his father, Anakin Skywalker.
-      With Luke's help, Anakin returned to the light side of the Force by destroying the Emperor at the cost of his own life,
-      fulfilling his destiny as the Chosen One. You can find more information <a href="https://starwars.fandom.com/wiki/Luke_Skywalker" target="_blank" rel="noopener noreferrer">here</a>.</p>
-      <p>See the PDF version of my resume <a href="#">here</a>.</p>
-      <p>As you can see, it's possible to add HTML tags in your about page.</p>
+      <p>I'm Arif Khan currently living in Mumbai, India.
+      Before I tell about myself I would like to share a little story about my journey of becoming "Software Engineer".
+      I've been passionate about computer's and technologies.
+      During early 2000 I gained knowledge about internet and computer. 
+      I was excited to see floppy drive how you can save documents and data in floppy. 
+      In those days having computer at home was expensive affair for my family. 
+      I used to visit cyber cafes to get access to internet and computer.
+      During this time I had the realization of spark in me to become "Software Engineer".  
+      <p/>
+      <p>
+      Now, I'm working for "JP Morgan". My job title in "JP Morgan" is "Associate Vice President (Software Engineer)". 
+      My responsibility in this organization is to build, architect and maintain enterprise level application.
+      Having more than 11 years of experience in Software Engineer, reponsiblity lies on my shoulders to guide and train team members.
+      One of my major projects in "JP Morgan" is "Electronic Filing". I'd built "Electronic Filing" application (design, UI and coding)
+      which helped operation's team to automatically file for reclaim with "Dutch Tax" authorities.
+      </p>        
+      <p>
+      I'm also into full stack development. I've great interest in front end technologies. 
+      I've good knowledge of front end technologies like Angular and React. 
+      My acheivement in full stack development was to single handedly migrated AngularJs application to Angular 2.0.
+      My primary language is C# and Javascript.
+      By soul I'm programmer I like learning new languages. I'm capable enough to write applications in languages like 
+      C#, Javascript, Java and Python. I've tried my hands on languages like go and kotlin. 
+      </p>
       `,
     education: [
       {
-        degree: "Ph.D.",
-        major: "Computer Science",
-        when: "2014-2018",
-        school: "Harvard University",
-        where: "Cambridge, MA",
-        moreInfo: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        See my thesis <a href="#">here</a>.</p>`,
-      },
-      {
-        degree: "M.Sc.",
+        degree: "GNIIT",
         major: "Software Engineering",
-        when: "2012-2014",
-        school: "Stanford University",
-        where: "Stanford, CA",
-        moreInfo: `"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."`,
+        when: "2007-2010",
+        school: "GNIIT",
+        where: "Mumbai, India",
+        moreInfo: `"Complete Software Engineering from NIIT"`,
       },
       {
-        degree: "B.Sc.",
-        major: "Computer Engineering",
-        when: "2008-2012",
-        school: "UCLA",
-        where: "Los Angeles, CA",
-        moreInfo: `<p>I finally found out how it feels like to live in LA; it was awesome!</p>`,
+        degree: "Graduation",
+        major: "Commerce",
+        when: "2005-2009",
+        school: "Mumbai University",
+        where: "Mumbai, India",
+        moreInfo: `<p>Complete my graduation from Mumbai university.</p>`,
       },
       {
-        degree: "High School Diploma",
-        when: "2000-2008",
-        school: "Awesome High School",
-        where: "Los Angeles, CA",
+        degree: "High School",
+        major: "Commerce",
+        when: "2002-2005",
+        school: "Kamala Mehta College",
+        where: "Mumbai, India",
+        moreInfo: `<p>Complete my High school from Kamala Metha College</p>`,
+      },
+      {
+        degree: "Schooling",
+        when: "1991-2002",
+        school: "SRWS High School",
+        where: "Mumbai, India",
       },
     ],
     experience: [
       {
-        role: "Software Developer",
-        when: "2014-Present",
-        company: "Facebook",
-        where: "Menlo Park, CA",
-        moreInfo: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+        role: "Senior Software Engineer (Associate Vice President)",
+        when: "2016-Present",
+        company: "JP Morgan",
+        where: "Mumbai, India",
+        logo: "jpmorgan",
+        moreInfo: `Currently working in JP Morgan as Senior Software Engineer (Associate Vice President).
+        My working on TACT (Tax ) team. 
+        My responsibility in this organization is to build, architect and maintain enterprise level application.
+      Having more than 11 years of experience in Software Engineer, reponsiblity lies on my shoulders to guide and train team members.
+      One of my major projects in "JP Morgan" is "Electronic Filing". I'd built "Electronic Filing" application (design, UI and coding)
+      which helped operation's team to automatically file for reclaim with "Dutch Tax" authorities.
+        `
       },
       {
-        role: "Web Developer",
-        when: "2010-2014",
-        company: "Amazon",
-        where: "Vancouver, BC",
-        moreInfo: `See my <a href="#" target="_blank" rel="noopener noreferrer">work</a>.`,
+        role: "Senior Software Engineer",
+        when: "2015-2016",
+        company: "BNP Paribas",
+        where: "Mumbai, India",
+        logo: "bnpparibas",
+        moreInfo: `Worked here as consolutant on the payroll of company called "MITS". 
+        I worked for BNP Paribas for about 1.5 years. I worked for REVAL team, 
+        REVAL is post trading platform. It used to give post trade related information through report. 
+        Using REVAL portal end user used to configure a report. 
+        This team's job was to enhance and maintain REVAL portal.  
+        In this team I'd worked on technologies like Silverlight, .net, WCF, Sql and SSRS.
+        `
       },
+      {
+        role: "Senior Software Engineer",
+        when: "2013-2015",
+        company: "Bank of America",
+        where: "Mumbai, India",
+        logo: "bankofamerica",
+        moreInfo: `In Bank of America I worked in GWIM. I was part of team which used to manage "Wealth Management" application.
+        This application was built on ASP.net (Web forms). My job was to make enhancement in "Wealth Management" application.  
+        I also had opportunity to work on Angularjs. In Wealth Management portal angularjs was used as a submodule to load UI components. 
+        `
+      },
+      {
+        role: "Associate Software Engineer",
+        when: "2010-2013",
+        company: "Wipor",
+        where: "Mumbai, India",
+        logo: "wipro",
+        moreInfo: `In the year 2010 I got the opportunity to work "Syncada". I joined "Syncada" as junior software engineer. 
+        I used to handle audit engines which used to process invoices. In few months time I was given opportunity to build data entry application
+        for our operation team to enter the invoice details manually. I helped built 2 windows applications. 
+        I also had opportunity to work with Cognos team. In this team I was helping Cognos developers with javascript code in reports. 
+        My main project in "Syncada" was TranManager. In this team I'd opportunity to learn UI and WCF. 
+        I extensively worked on WCF and UI application.  
+        In the year 2012-13 Syncada India process was taken over by Wipro. I was converted from "Syncada" employee to "Wipro" employee.
+        `
+      }
     ],
     skills: [
       {
+        name: "C#",
+        level: "90",
+        experience: "10 years",
+      },
+      {
         name: "JavaScript",
+        level: "90",
+        experience: "10 years",
+      },
+      {
+        name: "Angular",
         level: "85",
         experience: "5 years",
       },
       {
-        name: "Python",
+        name: "React",
         level: "75",
         experience: "2 years",
       },
       {
-        name: "Java",
+        name: "Sql",
+        level: "75",
+        experience: "10 years",
+      },
+      {
+        name: ".Net",
+        level: "75",
+        experience: "10 years",
+      },
+      {
+        name: ".Net",
+        level: "75",
+        experience: "10 years",
+      },
+      {
+        name: "NodeJs",
         level: "65",
         experience: "2 years",
       },
       {
-        name: "React",
-        level: "75",
+        name: "Python",
+        level: "65",
         experience: "1 years",
       },
       {
-        name: "Linux",
-        level: "75",
-        experience: "4 years",
-      },
-      {
-        name: "C++",
-        level: "40",
-        experience: "1 years",
-      },
+        name: "Java",
+        level: "70",
+        experience: "3 years",
+      }
     ],
     interests: [
       "Reading",
       "Programming",
-      "Playing the violin",
-      "Running",
-      "Watching Monty Python and the Holy Grail",
+      "Swimming",
+      "Cricket"
     ],
     //available_themes: ["great-gatsby", "master-yoda", "wonder-woman", "darth-vader", "luke-lightsaber"],
-    theme: "great-gatsby",
+    theme: "darth-vader",
     //fonts. Available: [default, programmer]
     font: "default",
   },
@@ -139,7 +206,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-111111111-1",
+        trackingId: "G-4NRSMV78G5",
         head: true,
       },
     },
@@ -155,5 +222,12 @@ module.exports = {
 				display: 'swap'
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `logos`,
+        path: `${__dirname}/static/clientartifacts`,
+      },
+    }
   ],
 }

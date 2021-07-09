@@ -20,6 +20,7 @@ const Menu = props => {
       { name: "Education", link: "/education" },
       { name: "Experience", link: "/experience" },
       { name: "Interests", link: "/interests" },
+      { name: "Certifications", link: "/certifications" },
     ];
   }else{
     menuList = [
@@ -28,6 +29,7 @@ const Menu = props => {
       { name: "Education", link: `/${data.site.siteMetadata.githubSiteName}/education` },
       { name: "Experience", link: `/${data.site.siteMetadata.githubSiteName}/experience` },
       { name: "Interests", link: `/${data.site.siteMetadata.githubSiteName}/interests` },
+      { name: "Certifications", link: `/${data.site.siteMetadata.githubSiteName}/certifications` },
     ];
   }
   

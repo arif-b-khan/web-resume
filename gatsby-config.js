@@ -125,7 +125,7 @@ module.exports = {
       {
         role: "Associate Software Engineer",
         when: "2010-2013",
-        company: "Wipor",
+        company: "Wipro",
         where: "Mumbai, India",
         logo: "wipro",
         moreInfo: `In the year 2010 I got the opportunity to work "Syncada". I joined "Syncada" as junior software engineer. 
@@ -157,7 +157,7 @@ module.exports = {
       {
         name: "React",
         level: "75",
-        experience: "2 years",
+        experience: "4 years",
       },
       {
         name: "Sql",
@@ -170,9 +170,9 @@ module.exports = {
         experience: "10 years",
       },
       {
-        name: ".Net",
+        name: "AWS",
         level: "75",
-        experience: "10 years",
+        experience: "2 years",
       },
       {
         name: "NodeJs",
@@ -195,6 +195,13 @@ module.exports = {
       "Programming",
       "Swimming",
       "Cricket"
+    ],
+    certifications: [
+      {
+        name: "AWS Solutions Architect",
+        badge: "aws_sol",
+        link: "https://www.credly.com/badges/716b5188-83f6-4fd0-9147-b3ebd93ad512/public_url"
+      }
     ],
     //available_themes: ["great-gatsby", "master-yoda", "wonder-woman", "darth-vader", "luke-lightsaber"],
     theme: "darth-vader",

@@ -1,5 +1,5 @@
 const activeEnv =
-process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 console.log(`Using environment config: '${activeEnv}'`);
 
 require("dotenv").config({
@@ -20,8 +20,8 @@ module.exports = {
         name: "github",
         link: "https://github.com/arif-b-khan",
       },
-      { name: "linkedin", link: "https://www.linkedin.com/in/arif-khan-01a5671b" },
-      { name: "twitter", link: "https://twitter.com/Arif77591270" },
+      { name: "linkedin", link: "https://www.linkedin.com/in/arif-b-khan/" },
+      { name: "twitter", link: "https://twitter.com/Aarif_b_khan" },
       { name: "instagram", link: "https://www.instagram.com/arif_b_khan" },
     ],
     about: `
@@ -188,6 +188,11 @@ module.exports = {
         name: "Java",
         level: "70",
         experience: "3 years",
+      },
+      {
+        name: "Azure",
+        level: "60",
+        experience: "3 years",
       }
     ],
     interests: [
@@ -219,14 +224,14 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-		`gatsby-plugin-less`,
+    `gatsby-plugin-less`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-            `IBM Plex Mono`,
+          `IBM Plex Mono`,
         ],
-				display: 'swap'
+        display: 'swap'
       },
     },
     {

@@ -13,7 +13,8 @@ const Menu = props => {
     }
   `);
   let menuList = [];
-  if(process.env.ENV === 'dev'){
+  console.log(`Environment: ${process.env.ENV}`);
+  if (process.env.ENV === 'development') {
     menuList = [
       { name: "About", link: "/" },
       { name: "Skills", link: "/skills" },
@@ -22,7 +23,7 @@ const Menu = props => {
       { name: "Interests", link: "/interests" },
       { name: "Certifications", link: "/certifications" },
     ];
-  }else{
+  } else {
     menuList = [
       { name: "About", link: `/${data.site.siteMetadata.githubSiteName}` },
       { name: "Skills", link: `/${data.site.siteMetadata.githubSiteName}/skills` },
@@ -32,7 +33,7 @@ const Menu = props => {
       { name: "Certifications", link: `/${data.site.siteMetadata.githubSiteName}/certifications` },
     ];
   }
-  
+
   const menuItems = menuList.map((item, index) => (
     <MenuItem
       to={item.link}

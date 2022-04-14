@@ -1,18 +1,22 @@
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 console.log(`Using environment config: '${activeEnv}'`);
+console.log(`Using environment config: '${process.env.NODE_ENV}'`);
 
 require("dotenv").config({
-  path: `.env.${activeEnv}`,
+  path: activeEnv !== "production" ? `.env` : `.env.${activeEnv}`,
 });
-console.log(process.env);
+console.log(process.env.SITENAME);
+
+console.log(process.env.ENV);
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: `/resume`,
   siteMetadata: {
-    siteUrl: `https://arif-b-khan.github.io/resume`,
-    githubSiteName: `resume`,
+    siteUrl: `https://arif-b-khan.github.io/`,
     name: `Arif Khan`,
+    githubSiteName: `resume`,
     role: `Software Developer`,
     email: `arif.bannehasan@gmail.com`,
     socialMedia: [

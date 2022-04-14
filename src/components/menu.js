@@ -12,27 +12,33 @@ const Menu = props => {
       }
     }
   `);
-  let menuList = [];
+  let menuList = [{ name: "About", link: "/" },
+  { name: "Skills", link: "/skills" },
+  { name: "Education", link: "/education" },
+  { name: "Experience", link: "/experience" },
+  { name: "Interests", link: "/interests" },
+  { name: "Certifications", link: "/certifications" }];
+
   console.log(`Environment: ${process.env.ENV}`);
-  if (process.env.ENV === 'development') {
-    menuList = [
-      { name: "About", link: "/" },
-      { name: "Skills", link: "/skills" },
-      { name: "Education", link: "/education" },
-      { name: "Experience", link: "/experience" },
-      { name: "Interests", link: "/interests" },
-      { name: "Certifications", link: "/certifications" },
-    ];
-  } else {
-    menuList = [
-      { name: "About", link: `/${data.site.siteMetadata.githubSiteName}` },
-      { name: "Skills", link: `/${data.site.siteMetadata.githubSiteName}/skills` },
-      { name: "Education", link: `/${data.site.siteMetadata.githubSiteName}/education` },
-      { name: "Experience", link: `/${data.site.siteMetadata.githubSiteName}/experience` },
-      { name: "Interests", link: `/${data.site.siteMetadata.githubSiteName}/interests` },
-      { name: "Certifications", link: `/${data.site.siteMetadata.githubSiteName}/certifications` },
-    ];
-  }
+  // if (`${process.env.ENV}` === 'dev') {
+  //   menuList = [
+  //     { name: "About", link: "/" },
+  //     { name: "Skills", link: "/skills" },
+  //     { name: "Education", link: "/education" },
+  //     { name: "Experience", link: "/experience" },
+  //     { name: "Interests", link: "/interests" },
+  //     { name: "Certifications", link: "/certifications" },
+  //   ];
+  // } else {
+  //   menuList = [
+  //     { name: "About", link: `/${data.site.siteMetadata.githubSiteName}` },
+  //     { name: "Skills", link: `/${data.site.siteMetadata.githubSiteName}/skills` },
+  //     { name: "Education", link: `/${data.site.siteMetadata.githubSiteName}/education` },
+  //     { name: "Experience", link: `/${data.site.siteMetadata.githubSiteName}/experience` },
+  //     { name: "Interests", link: `/${data.site.siteMetadata.githubSiteName}/interests` },
+  //     { name: "Certifications", link: `/${data.site.siteMetadata.githubSiteName}/certifications` },
+  //   ];
+  // }
 
   const menuItems = menuList.map((item, index) => (
     <MenuItem
